@@ -1,0 +1,515 @@
+*{
+    font-family: 'Roboto', sans-serif;/* либо Roboto либо приближённый к нему */
+}
+header{
+    position: relative;/* что бы сработало аболютное позиционирование у subheader */
+    height: 50px; 
+}
+nav{
+    position: relative;
+	width: 100%;
+	height: 50px;
+	background-color: #212121;
+	z-index: 5;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;/* выравнивание по горизонтали */
+    padding: 13px 70px;/* сверху-снизу 10px , слева справа 70px */
+    margin: 0;
+    list-style-type: none;
+}
+.menu .menu_link{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+}
+.menu .menu_item{
+    border-right: 2px dotted grey;
+    padding-right: 28px;/* отступ справа */
+}
+.menu .menu_item:last-child{
+    border:none;
+}
+.subheader{
+    position: absolute;
+	top: 50px;
+	width: 100%;
+	height: 84px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.subheader .subheader_logo{
+    display: block;
+    max-width: 100%; /* если картинка изменится,то ограничим её размер */
+    margin-top: 16px;
+
+}
+.subheader .subheader_official{
+    margin-top: 6px;
+    opacity: 0.5px;
+    color: #ffff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.subheader .subheader_call{
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+    color: #ffffff;
+    margin-top: 19px;
+}
+.subheader .subheader_phone{
+    font-size: 21px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 12px;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.subheader .subheader_btn{
+    margin-top: 19px;
+    width: 172px;
+    height: 46px;
+    box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12);
+    border:none;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #1eacc7, #4ce2ff);
+    text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21);
+    font-size: 14px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.promo{
+    min-height: 800px;
+    background: url(../img/Promo.png) center center/cover no-repeat;
+    padding: 150px 0 135px 0;
+}
+.promo .promo_header{
+    font-size: 60px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    line-height: 60px;
+    margin: 0; 
+}
+.promo .promo_subheader{
+    font-size: 36px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    line-height: 36px;
+    margin: 0;
+    margin-top: 10px;
+}
+.promo .promo_descr{
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 23px;
+}
+.promo .promo_btn{
+    display: block;
+    margin: 118px auto 0 auto;
+    width: 259px;
+    height: 63px;
+    box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #1eacc7, #4ce2ff);
+    text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21);
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.subheader .subheader_btn:hover, .promo .promo_btn:hover{/* hover при наведении на кнопку */
+    background-image:none;
+    background-color:#1eacc7;
+}
+.advantages{
+    min-height: 900px;
+    background-color: #ffffff;
+    margin: 71px 0 65px 0;
+}
+.advantages_frame{
+    margin: 0 auto;
+    width: 112px;
+    height: 24px;
+    background-color: #000000;
+    
+}
+.frame_text{
+    
+    font-size: 11px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-top: 4px;
+}
+
+.advantages_header{
+    font-size: 38px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.26;
+    letter-spacing: normal;
+    text-align: center;
+    color: #222222;
+    margin-top: 38px;
+    text-transform: uppercase;
+}
+.advantages .advantages_item{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 35px 0 0 55px;
+    width: 113px;
+    height: 113px;
+    background-color: #1eacc7;
+    border-radius:100%;
+}
+
+
+.advantages .advantages_text{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: justify;
+    color: #202020;
+}
+.text_blue{
+    font-size: 17px;
+    font-weight: normal;
+    color: #1eacc7;
+}
+.subtitle{
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #222222;
+}
+.mobile{
+    min-height: 864px;
+    padding: 48px 0 80px 0;
+    background: url(../img/mobile.png) center center/cover no-repeat;
+  
+}
+.mobile .mobile_item{
+    position: relative;
+    width: 320px;
+    height: 280px;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+    margin-bottom: 19px;
+}
+
+.mobile .mobile_item.mobile_item_1{background: url(../icons/mobile/bacground1.png) center center/cover no-repeat;}
+.mobile .mobile_item.mobile_item_2{background: url(../icons/mobile/bacground2.png) center center/cover no-repeat;}
+.mobile .mobile_item.mobile_item_3{background: url(../icons/mobile/bacground3.png) center center/cover no-repeat;}
+.mobile .mobile_item.mobile_item_4{background: url(../icons/mobile/bacground4.png) center center/cover no-repeat;}
+.mobile .mobile_item.mobile_item_5{background: url(../icons/mobile/bacground5.png) center center/cover no-repeat;}
+.mobile .mobile_item.mobile_item_6{background: url(../icons/mobile/bacground6.png) center center/cover no-repeat;}
+
+.mobile .row{
+    margin-top: 32px;
+}
+.mobile .mobile_item .mobile_item_subtitle{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 110px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.mobile .mobile_item .mobile_item_plus:before{/* before для того что бы нарисовать горизонтальную линию */
+    content:'';
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color:#1eacc7;
+}
+.mobile .mobile_item .mobile_item_plus:after{/* after для того что бы нарисовать вертикальную линию линию */
+    content:'';
+    display: block;
+    width: 2px;
+    height: 14px;
+    background-color:#1eacc7;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);/* для выравнивания по центру */
+}
+.mobile .mobile_item .mobile_item_plus{
+    display: flex;
+    justify-content: center;/* выравнивание по центру */
+    align-items: center;/* выравнивание по центру */
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 26px;
+    background-color: #000000;
+    margin: 0 auto;
+    border-radius: 100%;
+    padding: 6px;
+    cursor: pointer;/* при наведении меняется курсор */
+}
+.mobile .mobile_item .mobile_item_plus:hover{
+    background-color: red;
+    transition: 0.5s all;/* для замедления эффекта */
+}
+.choice{
+    min-height: 896px;
+    padding: 56px 0 138px 0;
+    background:url(../img/Choice/Choice_background.png) center center/cover no-repeat;
+    
+}
+.choice .advantages_frame, .world .advantages_frame{
+    background-color:white;
+}
+.choice .advantages_frame .frame_text, .world .advantages_frame .frame_text{
+    color: black;
+}
+.choice .advantages_header, .world .advantages_header{
+    color: white;
+}
+.choice .subtitle, .world .subtitle{
+    color:white;
+}
+.choice .car{  
+    display: block;
+    margin: 0 auto;
+    margin-top: 56px;
+    width: 759px;
+    height: 480px;
+    background:url(../img/Choice/Choice_Car.png)center center/cover no-repeat;
+    padding: 31px 0 4px 0;
+}
+.choice .car .choice_uberx_title{
+    font-size: 38px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.26;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.choice .car .choice_uberx_subtitle{
+    font-size: 17px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #222222;
+    text-transform: uppercase;
+}
+.choice .choice_CarsForEvrDay{
+    font-size: 17px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #222222;
+}
+
+.require{
+    padding: 68px 0 84px 0;
+}
+.require .require_block{
+    margin: 33px 0;
+}
+.require .require_block.nomarginbtm{
+    margin-bottom: 0px;
+}
+.require .require_block .require_title{
+    font-size: 22px;
+    font-weight: normal;
+    color: #1ca8c3;
+}
+.require .require_block .require_list{
+    list-style-type: none;
+    padding-left: 50px;
+    margin-top: 22px;
+    
+}
+.require .require_block .require_list li{
+    display: inline-block;
+    font-weight: 400;
+    line-height: 30px;
+}
+.require .require_block .require_list li:before{
+    content:'';
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate(-9px,-2px);
+    width: 21px;
+    height: 20px;
+    background:url('../img/Choice/Mark.png') center center/cover no-repeat;
+}
+.require .require_block .require_descr{
+    color: #1ca8c3;
+}
+.require .require_block.warning .require_title{
+    color:red
+}
+.require .require_block.warning .require_list li:before{
+    content:'';
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate(-9px,-2px);
+    width: 21px;
+    height: 20px;
+    background:url('../img/Choice/Mark_red.png') center center/cover no-repeat;
+}
+.world{
+    min-height: 717px;
+    padding: 49px 0 49px 0;
+    background:url(../img/world/background.png)center center/cover no-repeat;
+}
+.world .world_descr{
+    font-size: 15px;
+    text-align: center;
+    color: #1fbad6;
+    text-transform: uppercase;
+    margin-top: 486px;
+}
+footer{
+    min-height: 148px;
+    padding: 14px 0 39px 0;
+}
+footer .line{
+    display: block;
+    margin: 0 auto;
+    width: 299px;
+    height: 4px;
+    background-color: #1fbad6;
+}
+footer .footer_items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px; 
+}
+ footer .footer_social{
+    width: 160px;
+    display:flex;
+    margin-left: 32px;
+ }
+footer .footer_social .social_item{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-right: 9px;
+    width: 32px;
+    height: 32px;
+    border-radius:100%;
+    background-color: black;
+}
+footer .footer_social .social_item i{
+    color:white;
+}
+footer .footer_links{
+    width: 390px;
+    margin-left: 155px;
+}
+footer .footer_links .links_header{
+    display: flex;
+    justify-content: space-between;/* выравнивание по центру */
+}
+footer .footer_links .links_header .header_item{
+    font-size: 15px;
+    font-weight: 400;
+    color: #070716;
+    text-transform: uppercase;
+}
+footer .footer_links .links_sub{
+    display: flex;
+    justify-content: space-between;/* выравнивание по центру */
+    margin-top: 10px;
+}
+footer .footer_links .links_sub .sub_item{
+    font-size: 11px;
+    font-weight: 400;
+    color: #999999;
+    text-align: center;
+    text-transform: uppercase;
+}
+footer .apps{
+    margin-right: 56px;
+}
+footer .img_apps{
+    height: 30px;
+    margin-top: 7px;
+}
+footer .lang{
+    width:70px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 11px;
+    color: #1fbad6;
+    text-align: center;
+    text-transform: uppercase;
+}
+.header .hamburger{
+    display: none;
+}
+.xs-visible{
+    display: none;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+     margin-left: -0px; 
+}
+
+
+
+
+
+
+
+
+
+
+
